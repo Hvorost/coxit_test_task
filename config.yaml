@@ -1,0 +1,8 @@
+image_path: /Users/hvorost/Projects/coxit_test_task/arch.png
+template_dir: /Users/hvorost/Projects/coxit_test_task/wall_cabinets_png
+height_template_path: /Users/hvorost/Projects/coxit_test_task/height_template.png
+output_path: /Users/hvorost/Projects/coxit_test_task/output/
+scale_factor: 0.8
+confidence_height_threshold: 0.7
+confidence_threshold: 0.47
+canny: True

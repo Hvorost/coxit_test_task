@@ -1,1 +1,0 @@
-# coxit_test_task
