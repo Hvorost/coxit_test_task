@@ -248,7 +248,7 @@ if __name__ == '__main__':
     print(f"Found {len(elevation_boxes)} potential elevation areas.")
 
     # Looking for the wall cabinet height
-    confidence_height_threshold = 0.7
+    confidence_height_threshold = config['confidence_height_threshold']
     height_template = cv2.imread(config['height_template_path'], 0)
     height_boxes = multi_scale_matching(height_template, main_gray, confidence_height_threshold)
     height_boxes = np.array(height_boxes)
@@ -260,7 +260,7 @@ if __name__ == '__main__':
     # Template Matching
     print("Performing template matching for wall cabinets...")
     all_detections = []
-    confidence_threshold = 0.5  # Adjust this threshold (0.0 to 1.0)
+    confidence_threshold = config['confidence_threshold']  # Adjust this threshold (0.0 to 1.0)
 
     for prepared_box in prepared_boxes:
         for template_path in glob.glob(config['template_dir']+'/*'):
